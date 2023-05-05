@@ -1,11 +1,11 @@
 name: OpenWrt R4S
 
 on:
-  #workflow_dispatch:
-  push:
-    branches: [ "main" ]
-    paths-ignore: [ "LICENSE", "**/README.md" ]
-    tags: [ "v*" ]
+  workflow_dispatch:
+  #push:
+  #  branches: [ "main" ]
+  #  paths-ignore: [ "LICENSE", "**/README.md" ]
+  #  tags: [ "v*" ]
 jobs:
   imagebuilder:
     runs-on: ubuntu-latest
