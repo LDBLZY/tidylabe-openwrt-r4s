@@ -43,7 +43,8 @@ jobs:
 
       - name: Create release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/v')
+        #if: startsWith(github.ref, 'refs/tags/v')
         with:
-          prerelease: contains(github.ref, '-rc')
+          #prerelease: contains(github.ref, '-rc')
+          tag_name: ldblzy
           files: openwrt-*-sysupgrade.img.gz
