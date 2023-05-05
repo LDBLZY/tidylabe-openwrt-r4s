@@ -15,10 +15,9 @@ SUBTARGET = "armv8"
 PROFILE = "friendlyarm_nanopi-r4s"
 PACKAGES = [
     "firewall", "ip6tables-legacy", "iptables-legacy", "kmod-ipt-offload",
-    "luci-ssl", "-firewall4", "-nftables", "-kmod-nft-offload", "luci-app-ttyd", "luci-app-passwall"
+    "luci-ssl", "-firewall4", "-nftables", "-kmod-nft-offload", "luci-app-ttyd"
 ]
 EXTRA_PACKAGES = [
-    f"https://op.dllkids.xyz/packages/aarch64_generic/luci-app-passwall_git-24.124.56367-2fe0802_all.ipk"
 ]
 
 URL_IMAGEBUILDER = f"https://downloads.openwrt.org/releases/{VERSION}/targets/{TARGET}/{SUBTARGET}/openwrt-imagebuilder-{VERSION}-{TARGET}-{SUBTARGET}.Linux-x86_64.tar.xz"
@@ -45,10 +44,8 @@ if __name__ == "__main__":
     os.chdir(
         f"openwrt-imagebuilder-{VERSION}-{TARGET}-{SUBTARGET}.Linux-x86_64")
 
-    print(f"---passwall")
     for package_url in EXTRA_PACKAGES:
         urldownload(package_url, "./packages/")
-    print(f"passwall---")
 
     subprocess.run([
         "make", "image", f"PROFILE={PROFILE}", f"PACKAGES={' '.join(PACKAGES)}"
