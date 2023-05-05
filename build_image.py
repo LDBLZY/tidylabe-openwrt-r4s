@@ -15,7 +15,7 @@ SUBTARGET = "armv8"
 PROFILE = "friendlyarm_nanopi-r4s"
 PACKAGES = [
     "firewall", "ip6tables-legacy", "iptables-legacy", "kmod-ipt-offload",
-    "luci-ssl", "-firewall4", "-nftables", "-kmod-nft-offload", "luci-app-ttyd"
+    "luci-ssl", "-firewall4", "-nftables", "-kmod-nft-offload", "luci-app-ttyd", "luci-app-passwall"
 ]
 EXTRA_PACKAGES = [
     f"https://op.dllkids.xyz/packages/aarch64_generic/luci-app-passwall_git-24.124.56367-2fe0802_all.ipk"
