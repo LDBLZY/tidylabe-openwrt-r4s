@@ -1,6 +1,7 @@
 name: OpenWrt R4S
 
 on:
+  #workflow_dispatch:
   push:
     branches: [ "main" ]
     paths-ignore: [ "LICENSE", "**/README.md" ]
