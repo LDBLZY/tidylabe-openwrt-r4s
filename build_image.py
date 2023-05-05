@@ -15,7 +15,7 @@ SUBTARGET = "armv8"
 PROFILE = "friendlyarm_nanopi-r4s"
 PACKAGES = [
     "firewall", "ip6tables-legacy", "iptables-legacy", "kmod-ipt-offload",
-    "luci-ssl", "-firewall4", "-nftables", "-kmod-nft-offload"
+    "luci-ssl", "-firewall4", "-nftables", "-kmod-nft-offload", "luci-app-ttyd"
 ]
 EXTRA_PACKAGES = [
 ]
